@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+    <style>
+
+/*  */
+
+
+      /* Basic Selectors */
+      
+    
+      /* 0,0,1  = 001 = 1*/
+      h2 {
+        color: red!important;
+      }
+      
+      /* 0,1,0   = 010*/
+    /* Class Selectors */ 
+      .main-title {
+        color: cornflowerblue;
+      }
+
+      
+      
+      /* ID Selectors */
+
+      /* 1,0,0  = 100*/
+      #highlight {
+        background-color: palegoldenrod;
+      }
+      
+      /* Attributes selectors */
+      input[name="input-text"] {
+        border: 2px solid gold;
+      }
+
+      /*** Relational selectors and combinators ***/
+
+      /* descendant selector */
+
+      /* 0,1,1 = 011*/
+      section .second {
+        background-color: aliceblue;
+      }
+  
+      /* immediate child selector */
+
+      /* 0,0,2  = 002*/
+      ul > li {
+        color: darkorange;
+        font-weight: bold;
+      }
+
+      /* 0,2,1 = 21 */
+      /* Adjacent Sibling selector */
+      input[type="checkbox"]:checked + label {
+        color: red;
+
+      } 
+
+
+      /* General Sibling Selector */
+
+      li[data-item="active"] ~ li {
+        background-color: lemonchiffon;
+        border: 1px solid greenyellow;
+      }
+
+</style>
+  </head>
+
+  <body>
+    <h2 class="main-title">This title is in <em>red</em></h2>
+
+    <section>
+      <div class="second">
+        This is a class selector Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Perferendis quam rem cupiditate sed expedita!
+        Accusantium iure nisi laboriosam quibusdam maiores ipsa laudantium alias
+        veritatis quod? Reiciendis vitae voluptas praesentium consectetur?
+      </div>
+    </section>
+
+    <div id="highlight">
+      ID Selector. Selectors are so cool. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Pariatur, nisi velit voluptatem, deleniti fugit
+      molestias voluptates voluptatibus magni asperiores qui ex eligendi, cum
+      sequi facilis accusantium eius? Ab, perspiciatis repellat.
+    </div>
+
+    <h2>This is the title of my section</h2>
+
+    <p class="second">
+      This is a class selector Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Perferendis quam rem cupiditate sed expedita!
+      Accusantium iure nisi laboriosam quibusdam maiores ipsa laudantium alias
+      veritatis quod? Reiciendis vitae voluptas praesentium consectetur?
+    </p>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li data-item="active">Item 3</li>
+      
+        <!-- Item 4 -->
+        <li>
+        <ol>
+          <li>Item a</li>
+          <li>Item b</li>
+          <li>Item c</li>
+        </ol>
+      </li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+    </ul>
+
+    <form action="">
+      <label class="main-title" for="">input text</label>
+      <input
+        type="text"
+        name="input-text"
+        placeholder="Customize this input with an attribute selector"
+      />
+    </form>
+
+    <form action="">
+      <input type="checkbox" value="canada" /> <label for="">Canada</label>
+
+      <input type="checkbox" value="us" /> <label for="">US</label>
+
+      <input type="checkbox" value="uk" /> <label for="">UK</label>
+    </form>
+  </body>
+</html>

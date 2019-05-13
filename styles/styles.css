@@ -1,0 +1,12 @@
+h2 {
+  color: salmon;
+}
+
+p {
+  border: 1px solid cadetblue;
+  padding: 1em;
+}
+
+input {
+  border: 1px dashed red;
+}
